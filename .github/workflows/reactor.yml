@@ -15,3 +15,8 @@ jobs:
           --configuration Release \
           --output out
         name: Publish .NET Application
+      - uses: actions/upload-artifact@v3
+        name: Upload publish artifact
+        with:
+          name: web-app
+          path: out/
